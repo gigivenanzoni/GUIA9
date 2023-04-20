@@ -1,0 +1,26 @@
+package arreglos;
+import ArregloService.ArregloService;
+public class Arreglos {
+    public static void main(String[] args) {
+        ///Crear arreglos A y B
+        double[] A = new double[50];
+        double[] B = new double[20];
+    ///Inicializar A
+    ArregloService.inicializarA(A);
+    ///Mostrar A
+     System.out.println("Arreglo A sin ordenar:");
+        ArregloService.mostrar(A);
+    ///Ordenar A
+    ArregloService.ordenar(A);
+    // Mostrar A ordenado
+    System.out.println("Arreglo A ordenado:");
+    ArregloService.mostrar(A);
+    //Inicializar B
+    ArregloService.inicializarA(B);    
+    //Mostrar A y B
+    System.out.println("Arreglo A:");
+    ArregloService.mostrar(A);
+    System.out.println("Arreglo B:");
+    ArregloService.mostrar(B);
+    }
+}
