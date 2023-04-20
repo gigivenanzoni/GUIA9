@@ -1,0 +1,25 @@
+package ParDeNumerosEntidades;
+public class ParDeNumerosEnt {
+    ///Atributos
+    private double num1;
+    private double num2;
+    ///Constructor vacío con mathrandom para poner valores aleatorios a los números
+    public ParDeNumerosEnt() {
+        this.num1 = Math.random();
+        this.num2 = Math.random();
+    }
+    ///getters
+    public double getNum1() {
+        return num1;
+    }
+    public double getNum2() {
+        return num2;
+    }
+    ///Setters
+    public void setNum1(double num1) {
+        this.num1 = num1;
+    }
+    public void setNum2(double num2) {
+        this.num2 = num2;
+    }
+}
