@@ -1,0 +1,43 @@
+package ArregloService;
+
+import java.util.Arrays;
+import java.util.Random;
+public class ArregloService {
+    
+//Método inicializarA recibe un arreglo por parámetro y lo inicializa con números aleatorios.
+    public static void inicializarA(double[] arreglo) {
+        Random rand = new Random();
+        for (int i = 0; i < arreglo.length; i++) {
+            arreglo[i] = rand.nextDouble() * 100;
+        }
+    }
+    
+//Método mostrar recibe un arreglo por parámetro y lo muestra por pantalla.
+    public static void mostrar(double[] arreglo) {
+        System.out.println(Arrays.toString(arreglo));
+    }
+    
+//Método ordenar recibe un arreglo por parámetro y lo ordena de mayor a menor.
+    public static void ordenar(double[] arreglo) {
+            Arrays.sort(arreglo);
+            for (int i = 0; i < arreglo.length / 2; i++) {
+                double temp = arreglo[i];
+                arreglo[i] = arreglo[arreglo.length - 1 - i];
+                arreglo[arreglo.length - 1 - i] = temp;
+            }
+        }
+
+//Método inicializarB copia los primeros 10 números del arreglo A en el arreglo B. 
+//Luego llenar las últimas 10 posiciones del arreglo B con 0.5.
+ 
+    public static void inicializarB(double[] A, double[] B) {
+    for (int i = 0; i < B.length; i++) {
+        if (i < 10) {
+            B[i] = 0.5;
+        } else {
+            B[i] = A[i - 10];
+        }
+    }
+}
+    
+}
