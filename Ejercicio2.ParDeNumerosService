@@ -1,0 +1,40 @@
+package ParDeNumerosService;
+///Importar Entidades
+import ParDeNumerosEntidades.ParDeNumerosEnt;
+
+public class ParDeNumerosService {
+
+///Método mostrarValores que muestra cuáles son los dos números guardados.
+    public void mostrarValores(ParDeNumerosEnt par) {
+            System.out.println("Número 1: " + par.getNum1());
+            System.out.println("Número 2: " + par.getNum2());
+    }
+
+///Método devolverMayor para retornar cuál de los dos atributos tiene el mayor valor
+    public double devolverMayor(ParDeNumerosEnt par) {
+            if (par.getNum1() > par.getNum2()) {
+                return par.getNum1();
+            } else {
+                return par.getNum2();
+            }
+        }
+        
+///Método calcularPotencia para calcular la potencia del mayor valor de la clase elevado al menor número. 
+///Previamente se deben redondear ambos valores.
+    public double calcularPotencia(ParDeNumerosEnt par) {
+            double mayor = devolverMayor(par);
+            double menor = (mayor == par.getNum1()) ? par.getNum2() : par.getNum1();
+            mayor = Math.round(mayor);
+            menor = Math.round(menor);
+            return Math.pow(mayor, menor);
+        }
+
+///Método calculaRaiz, para calcular la raíz cuadrada del menor de los dos valores. 
+///Antes de calcular la raíz cuadrada se debe obtener el valor absoluto del número
+    public double calcularRaiz(ParDeNumerosEnt par) {
+            double menor = (par.getNum1() < par.getNum2()) ? par.getNum1() : par.getNum2();
+            menor = Math.abs(menor);
+            return Math.sqrt(menor);
+        }
+    
+}
