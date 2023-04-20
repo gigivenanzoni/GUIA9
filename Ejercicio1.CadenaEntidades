@@ -1,0 +1,27 @@
+package Cadena;
+public class Cadena {
+    ///Atributos
+    private String frase;
+    private int longitud;
+    ///Constructor vacío
+    public Cadena() {
+    }
+    ///Constructor con FRASE
+    public Cadena(String frase) {
+        this.frase = frase;
+    }
+    //Getters
+    public String getFrase() {
+        return frase;
+    }
+    public int getLongitud() {
+        return longitud;
+    }
+    ///Setters
+    public void setFrase(String frase) {
+        this.frase = frase;
+    }
+    public void setLongitud(int longitud) {
+        this.longitud = longitud;
+    }    
+}
